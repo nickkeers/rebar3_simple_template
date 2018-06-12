@@ -1,0 +1,13 @@
+{description, "A template for making a basic, pure Erlang application"}.
+{variables, [
+    {name, "simple", "Module name of the main file"}
+]}.
+
+{dir, "{{name}}/src"}.
+{dir, "{{name}}/include"}.
+
+{template, "simpleapp/simple_module.erl", "{{name}}/src/{{name}}.erl"}.
+{template, "simpleapp/simple_include.hrl", "{{name}}/include/{{name}}.hrl"}.
+{template, "simpleapp/simpleapp.app.src", "{{name}}/src/{{name}}.app.src"}.
+
+{file, "simpleapp/rebar.config", "{{name}}/rebar.config"}.
